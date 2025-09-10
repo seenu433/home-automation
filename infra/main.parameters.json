@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "functionAppName": {
+      "value": "door-fn"
+    },
+    "functionAppPlanName": {
+      "value": "homeautomation"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "storageAccountName": {
+      "value": "homeautomation"
+    },
+    "flumeFunctionAppName": {
+      "value": "flume-fn"
+    },
+    "logAnalyticsWorkspaceName": {
+      "value": "home-auto"
+    },
+    "applicationInsightsName": {
+      "value": "home-auto"
+    },
+    "serviceBusNamespaceName": {
+      "value": "srini-home-automation"
+    },
+    "authKey": {
+      "value": "your_auth_key_here"
+    },
+    "voiceMonkeyToken": {
+      "value": "your_voice_monkey_token_here"
+    },
+    "flumeUsername": {
+      "value": "your_flume_username_here"
+    },
+    "flumePassword": {
+      "value": "your_flume_password_here"
+    },
+    "flumeClientId": {
+      "value": "your_flume_client_id_here"
+    },
+    "flumeClientSecret": {
+      "value": "your_flume_client_secret_here"
+    },
+    "flumeTargetDeviceId": {
+      "value": "your_flume_device_id_here"
+    },
+    "voiceMonkeyDevice": {
+      "value": "your_alexa_device_name_here"
+    }
+  }
+}

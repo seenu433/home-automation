@@ -1,0 +1,345 @@
+# ============================================================================
+# 🏠 Home Automation Project - Comprehensive .gitignore
+# ============================================================================
+
+# ============================================
+# 🔐 Secrets and Configuration Files
+# ============================================
+*.local.json
+main.parameters.local.json
+local.settings.json
+.env
+.env.local
+*.secrets
+*.key
+*.pem
+*.pfx
+*.p12
+
+# ============================================
+# ☁️ Azure & Cloud Services
+# ============================================
+.azure/
+.vscode/settings.json
+PublishScripts/
+*.azurePubxml
+*.publishsettings
+csx/
+*.build.csdef
+ecf/
+rcf/
+
+# ============================================
+# 🔧 .NET / C# (door-fn)
+# ============================================
+## Build Results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio Files
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.suo
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+## Temporary Files
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.pdb
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+
+## Cache Files
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.[Cc]ache
+!?*.[Cc]ache/
+
+## Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+## Profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+## NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Other Tools
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+.JustCode
+_TeamCity*
+*.dotCover
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+*.mm.*
+AutoTest.Net/
+_Pvt_Extensions
+.paket/paket.exe
+paket-files/
+.fake/
+.cr/
+
+# ============================================
+# 🐍 Python (flume-fn)
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+## Virtual Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+.ENV/
+
+## Python Testing
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+## Python Tools
+.spyderproject
+.spyproject
+.rope_project_settings
+pip-log.txt
+pip-delete-this-directory.txt
+.webassets-cache
+instance/
+.scrapy
+htmlcov/
+
+# ============================================
+# 🌐 Web Technologies
+# ============================================
+## Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+## Static Web Apps
+dist/
+.next/
+out/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+
+# ============================================
+# 🏗️ Infrastructure as Code
+# ============================================
+## Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+## Bicep
+*.bicepparam
+
+# ============================================
+# 💻 IDE & Editor Files
+# ============================================
+## Visual Studio Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+## Visual Studio
+.vs/
+.vscode/
+
+## JetBrains IDEs
+.idea/
+*.sln.iml
+*.swp
+*.swo
+
+## Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+## Other Editors
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================
+# 🖥️ Operating System Files
+# ============================================
+## Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+## Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# 📊 Logs & Monitoring
+# ============================================
+*.log
+logs/
+*.log.*
+log/
+temp/
+tmp/
+
+# ============================================
+# 🔧 Build & Deployment
+# ============================================
+*.zip
+*.tar.gz
+*.rar
+*.7z
+publish/
+deployment/
