@@ -29,6 +29,7 @@ namespace HomeAutomation.Functions
                 ServiceBusSender sender = client.CreateSender(eventName);
 
                 ServiceBusMessage message = new ServiceBusMessage(eventName);
+                message.TimeToLive = TimeSpan.FromMinutes(1); // Set TTL to 1 minute
                 await sender.SendMessageAsync(message);
                 logger.LogInformation($"Cancel request sent for event: {eventName}");
                 response.StatusCode = System.Net.HttpStatusCode.OK;

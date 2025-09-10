@@ -92,6 +92,11 @@ resource serviceBusNamespace 'Microsoft.ServiceBus/namespaces@2022-10-01-preview
 resource queueTriggerevents 'Microsoft.ServiceBus/namespaces/queues@2022-10-01-preview' = {
   name: 'triggerevents'
   parent: serviceBusNamespace
+  properties: {
+    requiresDuplicateDetection: true
+    duplicateDetectionHistoryTimeWindow: 'PT1M' // 1 minute window
+    deadLetteringOnMessageExpiration: true
+  }
 }
 resource queueFrontDoorUnlocked 'Microsoft.ServiceBus/namespaces/queues@2022-10-01-preview' = {
   name: 'front_door_unlocked'

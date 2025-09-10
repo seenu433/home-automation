@@ -2,8 +2,6 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using Microsoft.Azure.Functions.Worker;
-using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Azure.Messaging.ServiceBus;
 
@@ -39,7 +37,7 @@ namespace HomeAutomation.Functions
 
                 string messageText= $"{{\"EventName\":\"{eventName}\",\"AnnounceFlowId\":\"{announceFlowId}\", \"TimeDealay\":\"{time}\" }}";
                 ServiceBusMessage message = new ServiceBusMessage(messageText);
-                message.MessageId = eventName;
+                message.MessageId = eventName; // This enables duplicate detection
 
                 long seq = await sender.ScheduleMessageAsync(message, DateTimeOffset.Now.AddSeconds(delaySeconds));
                 logger.LogInformation($"Scheduled message for event: {eventName} with delay: {delaySeconds}s");
