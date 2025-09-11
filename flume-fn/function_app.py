@@ -41,14 +41,23 @@ def leak_detector(myTimer: func.TimerRequest) -> None:
             
     except Exception as e:
         logging.error(f'❌ Error in leak detection: {str(e)}', exc_info=True)
-        # Send error notification to Alexa
-        try:
-            send_voice_monkey_alert("There was an error checking your water leak sensor. Please check the system.")
-            logging.info('Error notification sent to Alexa')
-        except Exception as alert_error:
-            logging.error(f'Failed to send error alert to Alexa: {str(alert_error)}')
+        # Log error details for debugging but don't announce system errors
+        # Only announce actual water leaks, not system/API errors
+        logging.error(f'Leak detection system error - check logs for details: {type(e).__name__}: {str(e)}')
+        
+        # Optional: Only send critical error alerts for repeated failures
+        # For now, we'll just log the error without voice announcements to avoid confusion
     
     logging.info('=== FLUME LEAK DETECTOR COMPLETED ===')
+
+def should_send_error_alert(error):
+    """
+    Determine if a system error should trigger a voice alert.
+    Only send alerts for critical errors, not routine API/network issues.
+    """
+    # For now, we'll be conservative and not send voice alerts for any system errors
+    # to avoid confusion with actual leak alerts
+    return False
 
 def check_flume_leaks():
     """
@@ -122,7 +131,8 @@ def check_flume_leaks():
             return False
         
     except Exception as e:
-        logging.error(f'Error connecting to Flume API: {str(e)}')
+        logging.error(f'Error connecting to Flume API: {type(e).__name__}: {str(e)}')
+        logging.error(f'This is a system/API error, not a water leak. Check Flume credentials and API status.')
         raise
 
 def send_voice_monkey_alert(message):
