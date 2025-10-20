@@ -1,0 +1,29 @@
+{
+  "doors": {
+    "front_door": {
+      "cancelQueue": "front_door_unlocked",
+      "announceMessage": "front door is open",
+      "targetDevice": "downstairs"
+    },
+    "garage_door": {
+      "cancelQueue": "garage_door_open", 
+      "announceMessage": "garage door is open",
+      "targetDevice": "downstairs"
+    },
+    "garage": {
+      "cancelQueue": "garage_open",
+      "announceMessage": "garage is open",
+      "targetDevice": "downstairs"
+    },
+    "sliding_door_right": {
+      "cancelQueue": "sliding_door_right_open",
+      "announceMessage": "sliding door right is open", 
+      "targetDevice": "downstairs"
+    },
+    "sliding_door_left": {
+      "cancelQueue": "sliding_door_left_open",
+      "announceMessage": "sliding door left is open",
+      "targetDevice": "downstairs"
+    }
+  }
+}

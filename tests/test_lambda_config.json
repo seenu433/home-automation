@@ -1,0 +1,29 @@
+{
+  "lambda": {
+    "functionName": "alexa-smart-home-proxy",
+    "region": "us-east-1"
+  },
+  "alexa": {
+    "applicationId": "amzn1.ask.skill.12345678-1234-1234-1234-123456789012",
+    "userId": "amzn1.ask.account.TESTUSER123456789",
+    "deviceId": "amzn1.ask.device.TEST123",
+    "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.test",
+    "apiEndpoint": "https://api.amazonalexa.com",
+    "sessionId": "amzn1.echo-api.session.12345678-1234-1234-1234-123456789012",
+    "requestId": "amzn1.echo-api.request.12345678-1234-1234-1234-123456789012",
+    "locale": "en-US"
+  },
+  "doorEvent": {
+    "doorName": "front door",
+    "intentName": "DoorEventIntent"
+  },
+  "smartHome": {
+    "messageId": "test-discovery-message-12345",
+    "payloadVersion": "3"
+  },
+  "testing": {
+    "autoRunTest": true,
+    "verbose": false,
+    "tokenFile": "lwa_token.json"
+  }
+}

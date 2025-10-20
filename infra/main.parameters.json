@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "functionAppName": {
+      "value": "door-fn"
+    },
+    "functionAppPlanName": {
+      "value": "homeautomation"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "storageAccountName": {
+      "value": "homeautomation"
+    },
+    "flumeFunctionAppName": {
+      "value": "flume-fn"
+    },
+    "alexaFunctionAppName": {
+      "value": "alexa-fn"
+    },
+    "logAnalyticsWorkspaceName": {
+      "value": "home-auto"
+    },
+    "applicationInsightsName": {
+      "value": "home-auto"
+    },
+    "serviceBusNamespaceName": {
+      "value": "srini-home-automation"
+    },
+    "flumeUsername": {
+      "value": "your_flume_username_here"
+    },
+    "flumePassword": {
+      "value": "your_flume_password_here"
+    },
+    "flumeClientId": {
+      "value": "your_flume_client_id_here"
+    },
+    "flumeClientSecret": {
+      "value": "your_flume_client_secret_here"
+    },
+    "flumeTargetDeviceId": {
+      "value": "your_flume_device_id_here"
+    },
+    "alexaSmartHomeClientId": {
+      "value": "client-id"
+    },
+    "alexaSmartHomeClientSecret": {
+      "value": "client-secret"
+    },
+    "alexaSmartHomeRedirectUri": {
+      "value": "https://pitangui.amazon.com/api/skill/link/M1PYYBVLEQNXCY"
+    },
+    "alexaLwaClientId": {
+      "value": "lwa-client-id"
+    },
+    "alexaLwaClientSecret": {
+      "value": "lwa-client-secret"
+    },
+    "keyVaultName": {
+      "value": "kv-home-auto"
+    },
+    "keyVaultSku": {
+      "value": "standard"
+    },
+    "allowedUserId": {
+      "value": "amazon-user-id"
+    },
+    "bypassAuth": {
+      "value": false
+    },
+    "doorEventSilentMode": {
+      "value": false
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "virtualDevices": {
+    "all": {
+      "name": "HA-All-Doorbell",
+      "description": "Virtual doorbell for whole house announcements",
+      "deviceId": "virtual-all-device",
+      "friendlyNames": ["all", "everywhere", "all devices", "whole house"],
+      "smartDeviceType": "DOORBELL",
+      "enablePressEvents": true,
+      "routineTrigger": true
+    },
+    "bedroom": {
+      "name": "HA-Bedroom-Doorbell",
+      "description": "Virtual doorbell for bedroom announcements",
+      "deviceId": "virtual-bedroom-device",
+      "friendlyNames": ["bedroom", "master bedroom", "bed room"],
+      "smartDeviceType": "DOORBELL",
+      "enablePressEvents": true,
+      "routineTrigger": true
+    },
+    "downstairs": {
+      "name": "HA-Downstairs-Doorbell", 
+      "description": "Virtual doorbell for downstairs announcements",
+      "deviceId": "virtual-downstairs-device",
+      "friendlyNames": ["downstairs", "main floor", "first floor", "living room", "kitchen"],
+      "smartDeviceType": "DOORBELL",
+      "enablePressEvents": true,
+      "routineTrigger": true
+    },
+    "upstairs": {
+      "name": "HA-Upstairs-Doorbell",
+      "description": "Virtual doorbell for upstairs announcements",
+      "deviceId": "virtual-upstairs-device",
+      "friendlyNames": ["upstairs", "second floor", "upper floor", "office"],
+      "smartDeviceType": "DOORBELL", 
+      "enablePressEvents": true,
+      "routineTrigger": true
+    }
+  },
+  "settings": {
+    "defaultDevice": "all",
+    "enableSmartHomeDevices": true,
+    "announceDeviceStatus": true,
+    "enableRoutineTriggers": true,
+    "pressEventTimeout": 30
+  },
+  "announcementQueue": {
+    "maxSize": 100,
+    "ttlMinutes": 60,
+    "priority": {
+      "emergency": 1,
+      "high": 2, 
+      "normal": 3,
+      "low": 4
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sslCertificateType": "Wildcard",
+          "uri": "https://srp-alexa-fn.azurewebsites.net/api/alexa_skill?code=YOUR_AZURE_FUNCTION_KEY"
+        },
+        "tasks": [
+          {
+            "name": "ProcessDoorEvent",
+            "version": "1"
+          },
+          {
+            "name": "GetAnnouncement",
+            "version": "1"
+          }
+        ]
+      },
+      "smartHome": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:142472569320:function:alexa-smart-home-proxy"
+        },
+        "protocolVersion": "3"
+      }
+    },
+    "manifestVersion": "1.0",
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Srini Home Automation",
+          "summary": "Control your home automation system and make targeted announcements",
+          "description": "A comprehensive smart home skill that allows you to monitor door events, receive water leak alerts, and make targeted announcements to different areas of your home. Features virtual announcement devices for All, Bedroom, Downstairs, and Upstairs zones.",
+          "keywords": [
+            "home automation",
+            "smart home",
+            "door monitoring", 
+            "water leak detection",
+            "security",
+            "announcements",
+            "virtual devices"
+          ],
+          "examplePhrases": [
+            "Alexa, ask Home Automation to check door status",
+            "Alexa, tell Home Automation to announce dinner is ready",
+            "Alexa, ask Home Automation to tell the bedroom it's bedtime"
+          ]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "This skill requires connecting to your home automation system.",
+      "category": "SMART_HOME",
+      "distributionCountries": ["US"]
+    },
+    "permissions": [
+      {
+        "name": "alexa::async_event:write"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "https://github.com/seenu433/home-automation/blob/main/privacy.html",
+          "termsOfUseUrl": "https://github.com/seenu433/home-automation/blob/main/terms.html"
+        }
+      }
+    }
+  }
+}

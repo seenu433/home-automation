@@ -1,0 +1,64 @@
+{
+  "announce": {
+    "message": "Test announcement from automated test",
+    "url": "https://YOUR-FUNCTION-APP.azurewebsites.net/api/announce",
+    "key": "YOUR_FUNCTION_KEY_HERE",
+    "device": "all",
+    "testDelaySeconds": 2
+  },
+  "alexa": {
+    "userId": "amzn1.account.YOUR_ALEXA_USER_ID",
+    "requestId": "amzn1.echo-api.request.12345678-1234-1234-1234-123456789012",
+    "applicationId": "amzn1.ask.skill.YOUR_SKILL_ID",
+    "locale": "en-US",
+    "sessionId": "amzn1.echo-api.session.12345678-1234-1234-1234-123456789012",
+    "apiEndpoint": "https://api.amazonalexa.com",
+    "deviceId": "amzn1.ask.device.TEST123",
+    "apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.test"
+  },
+  "files": {
+    "parametersFile": "infra\\main.parameters.local.json",
+    "lwaTokenFile": "lwa_token.json"
+  },
+  "getAnnouncement": {
+    "testDevices": [
+      "all",
+      "bedroom",
+      "downstairs",
+      "upstairs"
+    ],
+    "deviceName": "all"
+  },
+  "azureFunction": {
+    "functionAppName": "YOUR-FUNCTION-APP-NAME",
+    "url": "https://YOUR-FUNCTION-APP.azurewebsites.net/api/alexa_skill",
+    "key": "YOUR_FUNCTION_KEY_HERE",
+    "resourceGroup": "YOUR-RESOURCE-GROUP"
+  },
+  "doorEvent": {
+    "doorActions": [
+      "opened",
+      "closed"
+    ],
+    "doorName": "front door"
+  },
+  "smartHome": {
+    "messageId": "test-discovery-message-12345",
+    "payloadVersion": "3"
+  },
+  "testing": {
+    "skipPrompts": false,
+    "autoRunTest": true,
+    "verbose": true
+  },
+  "oauth": {
+    "clientId": "amzn1.application-oa2-client.YOUR_CLIENT_ID",
+    "redirectUri": "https://pitangui.amazon.com/api/skill/link/YOUR_REDIRECT_CODE",
+    "authUrl": "https://www.amazon.com/ap/oa",
+    "scope": "profile",
+    "smartHomeScope": "profile",
+    "tokenUrl": "https://api.amazon.com/auth/o2/token",
+    "profileUrl": "https://api.amazon.com/user/profile",
+    "clientSecret": "amzn1.oa2-cs.v1.YOUR_CLIENT_SECRET"
+  }
+}

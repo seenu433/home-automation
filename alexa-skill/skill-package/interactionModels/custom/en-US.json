@@ -1,0 +1,135 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "home automation",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "DoorEventIntent",
+          "slots": [
+            {
+              "name": "DoorName",
+              "type": "DOOR_NAMES"
+            },
+            {
+              "name": "DoorAction",
+              "type": "DOOR_ACTIONS"
+            }
+          ],
+          "samples": [
+            "the {DoorName} is {DoorAction}",
+            "{DoorName} {DoorAction}",
+            "report {DoorName} {DoorAction}",
+            "notify {DoorName} is {DoorAction}",
+            "{DoorName} was {DoorAction}",
+            "the {DoorName} has been {DoorAction}"
+          ]
+        },
+        {
+          "name": "GetAnnouncementForDeviceIntent",
+          "slots": [
+            {
+              "name": "DeviceName",
+              "type": "VIRTUAL_DEVICES"
+            }
+          ],
+          "samples": [
+            "get announcement for {DeviceName}",
+            "read announcement for {DeviceName}",
+            "what's the message for {DeviceName}",
+            "read the queued message for {DeviceName}",
+            "announce for {DeviceName}",
+            "process announcement for {DeviceName}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "DOOR_NAMES",
+          "values": [
+            {
+              "name": {
+                "value": "front door"
+              }
+            },
+            {
+              "name": {
+                "value": "garage door"
+              }
+            },
+            {
+              "name": {
+                "value": "garage"
+              }
+            },
+            {
+              "name": {
+                "value": "sliding door right"
+              }
+            },
+            {
+              "name": {
+                "value": "sliding door left"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DOOR_ACTIONS",
+          "values": [
+            {
+              "name": {
+                "value": "opened"
+              }
+            },
+            {
+              "name": {
+                "value": "closed"
+              }
+            }
+          ]
+        },
+        {
+          "name": "VIRTUAL_DEVICES",
+          "values": [
+            {
+              "name": {
+                "value": "all"
+              },
+              "id": "all"
+            },
+            {
+              "name": {
+                "value": "bedroom"
+              },
+              "id": "bedroom"
+            },            
+            {
+              "name": {
+                "value": "downstairs"
+              },
+              "id": "downstairs"
+            },            
+            {
+              "name": {
+                "value": "upstairs"
+              },
+              "id": "upstairs"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
